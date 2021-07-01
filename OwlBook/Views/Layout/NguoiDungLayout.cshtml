@@ -1,0 +1,749 @@
+﻿<!DOCTYPE html>
+
+<html lang="">
+<head>
+    <title>OwlBook</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>@ViewBag.Title</title>
+    @*Chèn link template mẫu*@
+    <link href="~/Content/NguoiDungCssLayout/layout.css" rel="stylesheet" />
+    @*Chèn css thiết kế*@
+    <link href="~/Content/NguoiDungCssLayout/NguoiDungCss.css" rel="stylesheet" />
+    <link href="~/Content/fontawesome-free/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    @*Chèn jquery slider*@
+    <link href="~/Content/Slider/nivo-slider.css" rel="stylesheet" />
+    <script src="~/Content/Slider/jquery-1.7.1.min.js"></script>
+    <script src="~/Content/Slider/jquery.nivo.slider.pack.js"></script>
+    <script src="~/Content/Slider/jquery.nivo.slider.js"></script>
+</head>
+<body>
+    <div id="AllPage">
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <div class="wrapper row0">
+            <div id="topbar" class="hoc clear">
+                <div class="fl_left">
+                    <!-- ################################################################################################ -->
+                    <ul class="nospace">
+                        <li><i class="fas fa-phone rgtspace-5"></i> +00 (123) 456 7890</li>
+                        <li><i class="far fa-envelope rgtspace-5"></i> minhhieu123@gmail.com</li>
+                        <li id="welcome"><marquee><b>Chào Mừng Bạn Đến Với Tiệm Sách Của Cú</b></marquee></li>
+                    </ul>
+                    <!-- ################################################################################################ -->
+                </div>
+                <div class="fl_right">
+                    <!-- ################################################################################################ -->
+                    <ul class="nospace">
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-home">
+                                </i>
+                            </a>
+                        </li>
+                        @*Icon thường dùng*@
+                        <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
+                        <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li>
+                        <li id="searchform">
+                            <div>
+                                <form action="#" method="post">
+                                    <fieldset>
+                                        <legend>Tìm Nhanh:...</legend>
+                                        <input type="text" placeholder="Enter search term&hellip;">
+                                        <button type="submit"><i class="fas fa-search"></i></button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- ################################################################################################ -->
+                </div>
+            </div>
+        </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <div class="wrapper row1">
+            <header id="header" class="hoc clear">
+                <div id="logo" class="fl_left">
+                    <!-- ################################################################################################ -->
+                    <h1>
+                        <a href="index.html">
+                            <img src="~/Content/Images/owl.png" />
+                            OwlBook
+                        </a>
+                    </h1>
+                    <!-- ################################################################################################ -->
+                </div>
+                <nav id="mainav" class="fl_right">
+                    <!-- ################################################################################################ -->
+                    <ul class="clear">
+                        <li class="active">
+                            <a href="@Url.Action("Index", "Home")">
+                                Home
+                                <i class="fas fa-home"></i>
+
+                            </a>
+                        </li>
+                        <li id="ChuDe">
+                            <a class="drop" href="#">
+                                Chủ Đề
+                                <i class="fas fa-list"></i>
+                            </a>
+                            <ul>
+                                @* action trả về list các chủ đề *@
+                            <li class="menu"><a href="#">Tôn giáo</a></li>
+                            <li class="menu"><a href="#">Giáo dục</a></li>
+                            <li class="menu"><a href="#">Kinh tế</a></li>
+                            <li class="menu"><a href="#">Thể thao</a></li>
+                            <li class="menu"><a href="#">Gia đình</a></li>
+                            <li class="menu"><a href="#">Xem thêm</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            @* action đăng nhập *@
+                        Đăng Nhập
+                        <i class="fas fa-sign-in-alt"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        @* action đăng ký *@
+                    Đăng Ký
+                    <i class="fas fa-edit"></i>
+                </a>
+            </li>
+            <li>
+                <a class="drop" href="#">
+                    Giỏ Hàng <i class="fas fa-truck"></i>
+                    @* action giỏ hàng *@
+                </a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            @* action giản lý sản phẩm *@
+                        Quản Lý Sản Phẩm
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- ################################################################################################ -->
+    </nav>
+    </header>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    @*Ảnh đổi background*@
+    <!---->
+    @*Background chính*@
+    <div id="hinhtonhat" class="wrapper bgded overlay" style="background-image:url('https://c.wallhere.com/photos/e5/53/newspaper_coffee_cup_spoon_sunglasses_news_cup_holder-1025360.jpg!d');">
+        <div id="slider" class="nivoSlider">
+            <img src="https://c.wallhere.com/photos/0f/ac/trinket_paris_tower_letter-787361.jpg!d" />
+            <img src="https://c.wallhere.com/photos/af/5a/2560x1600_px_feathers_hands_ink_letter_Pens_Quills-1195000.jpg!d" />
+            <img src="https://c.wallhere.com/photos/55/57/clock_letter_paper_ink_pen_feather-612555.jpg!d" />
+            <img src="https://c.wallhere.com/photos/a5/7e/book_notes_paper_lines_font-788355.jpg!d" />
+            <div id="pageintro" class="hoc clear">
+                <!-- ################################################################################################ -->
+                <article>
+                    <h3 class="heading">Life is short and the world is wide</h3>
+                    <div id="backgroundfortext">
+                        <p>
+                            <b>
+                                If you only read the books that everyone else is reading, you can only think what everyone else is thinking..
+                                A great book should leave you with many experiences, and slightly exhausted at the end. You live several lives while reading
+                            </b>
+                        </p>
+                    </div>
+                </article>
+                <!-- ################################################################################################ -->
+            </div>
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div id="onethird" class="wrapper row2">
+        <section id="introblocks" class="hoc container clear">
+            <!-- ################################################################################################ -->
+            <ul class="nospace group">
+                <li class="one_third first">
+                    <article>
+                        <a href="#"><i class="fas fa-hand-peace"></i></a>
+                        <h6 class="heading underline">GIỚI THIỆU</h6>
+                        <p>
+                            Sách không chỉ để đọc mà còn để khoe - đó chính
+                            là tôn chỉ hoạt động của OwlBook. Ở OwlBook, bạn có
+                            thể tìm kiếm sách theo tên sách hoặc tác giả. Đồng thời
+                            OwlBook cũng gợi ý cho bạn về những cuốn sách cùng tác giả,
+                            cùng thể loại với cuốn bạn đang tìm. Bạn có thể kết nối với những người
+                            có cùng sở thích và tham gia vào những nhóm đọc sách trên OwlBook.
+                        </p>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article class="active">
+                        <a href="#"><i class="fas fa-microphone"></i></a>
+                        <h6 class="heading underline">LIÊN HỆ</h6>
+                        <p>
+                            Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCMCông
+                            Ty Cổ Phần Phát Hành Sách TP HCM - OWLBOOK - 62 Lê Lợi, Quận 1, TP. HCM, Việt Nam Owlbook.com
+                            nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận
+                            hàng trực tiếp tại văn phòng cũng như tất cả Hệ Thống OwlBook trên toàn quốc.
+                        </p>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <a href="#"><i class="fas fa-moon"></i></a>
+                        <h6 class="heading underline">HƯỚNG DẪN</h6>
+                        <p>
+                            Để tiết kiệm thời gian trong những lần mua hàng sau và có thể kiểm tra đơn hàng của bạn bất cứ lúc nào, bạn vui lòng Đăng ký thành viên theo các bước sau:...
+                        </p>
+                    </article>
+                </li>
+            </ul>
+            <!-- ################################################################################################ -->
+        </section>
+    </div>
+
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+
+    <div id="wrapper row3" class="wrapper row3">
+        @RenderBody()
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="center btmspace-80">
+                <h6 class="heading underline font-x2">CÁC THỂ LOẠI SÁCH ĐƯỢC QUAN TÂM</h6>
+            </div>
+            <ul class="nospace group overview btmspace-80">
+                <li class="one_third">
+                    <article>
+                        <div class="clear">
+                            <a href="#"><i class="fas fa-cogs"></i></a>
+                            <h6 class="heading">Công Nghệ Thông Tin</h6>
+                        </div>
+
+                        <a href="#">
+                            <p>
+                                Ngành Công nghệ thông tin là 1 ngành nghề rộng lớn,
+                                bao gồm nhiều lĩnh vực, có ảnh hưởng tới nhiều ngành nghề
+                                khác nhau của xã hội...
+                            </p>
+                        </a>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <div class="clear">
+                            <a href="#"><i class="fab fa-angellist"></i></a>
+                            <h6 class="heading">Phát Triển Bản Thân</h6>
+                        </div>
+
+                        <a href="#">
+                            <p>
+                                Phát triển bản thân là một nghệ thuật. Nó đòi hỏi bạn phải
+                                luyện tập cả đời để thành thạo. Trong đó 10 điều dưới đây bạn
+                                cần thực hiện mỗi ngày...
+                            </p>
+                        </a>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <div class="clear">
+                            <a href="#"><i class="fas fa-book"></i></a>
+                            <h6 class="heading">Tiểu Thuyết</h6>
+                        </div>
+
+                        <a href="#">
+                            <p>
+                                Tiểu thuyết là một thể loại văn xuôi có hư cấu, thông qua nhân vật,
+                                hoàn cảnh, sự việc để phản ánh bức tranh xã hội rộng lớn và những vấn đề của
+                                cuộc sống con người....
+                            </p>
+                        </a>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <div class="clear">
+                            <a href="#">
+                                <i class="fas fa-address-card"></i>
+                            </a>
+                            <h6 class="heading">Giáo Dục</h6>
+                        </div>
+
+                        <a href="#">
+                            <p>
+                                Giáo dục vừa mang tính khoa học vừa mang tính nghệ thuật. Giáo dục là
+                                một quá trình đào tạo con người một cách có mục đích, nhằm chuẩn bị cho họ tham
+                                gia vào đời sông xã hội, lao động sản xuất...
+                            </p>
+                        </a>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <div class="clear">
+                            <a href="#"><i class="fas fa-chart-line"></i></a>
+                            <h6 class="heading">Kinh Tế</h6>
+                        </div>
+                        <a href="#">
+                            <p>
+                                Kinh tế là tổng hòa các mối quan hệ tương tác lẫn nhau của con người và xã hội -
+                                liên quan trực tiếp đến việc sản xuất, trao đổi, phân phối, tiêu dùng các loại
+                                sản phẩm hàng hóa và dịch vụ...
+                            </p>
+                        </a>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <div class="clear">
+                            <a href="#"><i class="fas fa-power-off"></i></a>
+                            <h6 class="heading">Tiểu Sử || Hồi ký</h6>
+                        </div>
+                        <a href="#">
+                            <p>
+                                Hồi kí là một thể loại hình kí để kể lại những biến cố đã xảy ra trong quá
+                                khứ. Người viết hồi kí đã tiếp nhận và ghi chép phần hiện thực mà tác giả nhìn
+                                rõ hơn dựa trên cơ sở...
+                            </p>
+                        </a>
+                    </article>
+                </li>
+            </ul>
+            <!-- ################################################################################################ -->
+            <!-- / main body -->
+            <div class="clear"></div>
+        </main>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    @*Chèn partial view*@
+
+    <div id="AnhTacGia" class="wrapper row2">
+        <section class="hoc container clear">
+            <!-- ################################################################################################ -->
+            <div class="center btmspace-80">
+                <h6 class="heading underline font-x2">MỘT SỐ TÁC GIẢ TIÊU BIỂU</h6>
+            </div>
+            <div style="display:flex;">
+                <ul class="nospace group">
+                    @* action ảnh tác giả *@
+                    <li id="TacGia" class="TacGiaContain">
+                        <figure>
+                            <a href="#">
+                                <img src="https://44.media.tumblr.com/089755ce2d49c2b2e26f703a550b311e/68b4068c09d2df6e-68/s540x810_f1/1738f3731eb901b0299dc4f8adb5d0f81b7562f8.gifv" alt="Image">
+                            </a>
+
+                            <figcaption><a href=""><b>Tên tác giả</b></a></figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="nospace group">
+                    @* action ảnh tác giả *@
+                    <li id="TacGia" class="TacGiaContain">
+                        <figure>
+                            <a href="#">
+                                <img src="https://44.media.tumblr.com/089755ce2d49c2b2e26f703a550b311e/68b4068c09d2df6e-68/s540x810_f1/1738f3731eb901b0299dc4f8adb5d0f81b7562f8.gifv" alt="Image">
+                            </a>
+
+                            <figcaption><a href=""><b>Tên tác giả</b></a></figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="nospace group">
+                    @* action ảnh tác giả *@
+                    <li id="TacGia" class="TacGiaContain">
+                        <figure>
+                            <a href="#">
+                                <img src="https://44.media.tumblr.com/089755ce2d49c2b2e26f703a550b311e/68b4068c09d2df6e-68/s540x810_f1/1738f3731eb901b0299dc4f8adb5d0f81b7562f8.gifv" alt="Image">
+                            </a>
+
+                            <figcaption><a href=""><b>Tên tác giả</b></a></figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="nospace group">
+                    @* action ảnh tác giả *@
+                    <li id="TacGia" class="TacGiaContain">
+                        <figure>
+                            <a href="#">
+                                <img src="https://44.media.tumblr.com/089755ce2d49c2b2e26f703a550b311e/68b4068c09d2df6e-68/s540x810_f1/1738f3731eb901b0299dc4f8adb5d0f81b7562f8.gifv" alt="Image">
+                            </a>
+
+                            <figcaption><a href=""><b>Tên tác giả</b></a></figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+            <!-- ################################################################################################ -->
+
+            <div class="center btmspace-80">
+                <h6 class="heading underline font-x2">NỔI BẬT</h6>
+            </div>
+            <ul class="nospace group">
+                @* action danh sách các sách cửa hàng đang có *@
+                 <div id="SanPhamSach">
+                  <li id="Sao">
+                    <figure id="ListSach">
+                        <a id="AnhSach" href="#">@* action click để xem chi tiết *@
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81ijdPhNFUL.jpg" alt="Image"> @*link ảnh sách*@
+                            <label id="ChiTiet" class="ChiTiet"><b>Chi Tiết...</b></label>
+                        </a>
+                        <div id="FooterSach">
+                            <figcaption id="TenSach"><a href="#"><b>Tên sách</b></a></figcaption> @*Tên sách click để xem chi tiết*@
+                            <p id="GiaBan"><b>100.000đ</b></p>
+                            <div id="NgoiSao" class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star" />
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star" />
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star" />
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star" />
+                                    <label class="star star-1" for="star-1"></label>
+                                </form>
+                            </div>
+                        </div>
+                    </figure>
+
+                    <div id="ThemVaoGioHang">
+                        <div>
+                            <button type="submit" id="MuaHangbt" style="cursor:pointer"> Mua Sách <i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </li> 
+                </div>
+                <div id="SanPhamSach">
+                  <li id="Sao">
+                    <figure id="ListSach">
+                        <a id="AnhSach" href="#">@* action click để xem chi tiết *@
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81ijdPhNFUL.jpg" alt="Image"> @*link ảnh sách*@
+                            <label id="ChiTiet" class="ChiTiet"><b>Chi Tiết...</b></label>
+                        </a>
+                        <div id="FooterSach">
+                            <figcaption id="TenSach"><a href="#"><b>Tên sách</b></a></figcaption> @*Tên sách click để xem chi tiết*@
+                            <p id="GiaBan"><b>100.000đ</b></p>
+                            <div id="NgoiSao" class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star" />
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star" />
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star" />
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star" />
+                                    <label class="star star-1" for="star-1"></label>
+                                </form>
+                            </div>
+                        </div>
+                    </figure>
+
+                    <div id="ThemVaoGioHang">
+                        <div>
+                            <button type="submit" id="MuaHangbt" style="cursor:pointer"> Mua Sách <i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </li>
+                </div>
+                <div id="SanPhamSach">
+                  <li id="Sao">
+                    <figure id="ListSach">
+                        <a id="AnhSach" href="#">@* action click để xem chi tiết *@
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81ijdPhNFUL.jpg" alt="Image"> @*link ảnh sách*@
+                            <label id="ChiTiet" class="ChiTiet"><b>Chi Tiết...</b></label>
+                        </a>
+                        <div id="FooterSach">
+                            <figcaption id="TenSach"><a href="#"><b>Tên sách</b></a></figcaption> @*Tên sách click để xem chi tiết*@
+                            <p id="GiaBan"><b>100.000đ</b></p>
+                            <div id="NgoiSao" class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star" />
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star" />
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star" />
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star" />
+                                    <label class="star star-1" for="star-1"></label>
+                                </form>
+                            </div>
+                        </div>
+                    </figure>
+
+                    <div id="ThemVaoGioHang">
+                        <div>
+                            <button type="submit" id="MuaHangbt" style="cursor:pointer"> Mua Sách <i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </li>
+                </div>
+                <div id="SanPhamSach">
+                  <li id="Sao">
+                        <figure id="ListSach">
+                            <a id="AnhSach" href="#">
+                                @* action click để xem chi tiết *@
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81ijdPhNFUL.jpg" alt="Image"> @*link ảnh sách*@
+                            <label id="ChiTiet" class="ChiTiet"><b>Chi Tiết...</b></label>
+                        </a>
+                        <div id="FooterSach">
+                            <figcaption id="TenSach"><a href="#"><b>Tên sách</b></a></figcaption> @*Tên sách click để xem chi tiết*@
+                            <p id="GiaBan"><b>100.000đ</b></p>
+                            <div id="NgoiSao" class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star" />
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star" />
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star" />
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star" />
+                                    <label class="star star-1" for="star-1"></label>
+                                </form>
+                            </div>
+                        </div>
+                    </figure>
+
+                    <div id="ThemVaoGioHang">
+                        <div>
+                            <button type="submit" id="MuaHangbt" style="cursor:pointer"> Mua Sách <i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </li>
+                </div>
+            </ul>
+    <!-- ################################################################################################ -->
+    </section>
+    </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <div id="TrichDanTieuBieu" class="wrapper bgded overlay" style="background-image:url('https://c.wallhere.com/images/2e/4d/53e2a8686823e95f27bee9006e63-1913475.jpg!d');">
+
+            <section class="hoc container clear">
+                <!-- ################################################################################################ -->
+                <div class="center btmspace-80">
+                    <h6 class="heading underline font-x2">TRÍCH DẪN TIÊU BIỂU</h6>
+                </div>
+                <ul id="testimonials" class="nospace group btmspace-80">
+                    <li class="one_half first">
+                        <blockquote>'Trong đời người, có hai con đường bằng phẳng không trở ngại: Một là đi tới lý tưởng, một là đi tới cái chết.. có hai chiến binh mạnh mẽ nhất là thời gian và sự kiên nhẫn'</blockquote>
+                        <figure class="clear">
+                            <img class="circle" src="https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4Njg0ODUyOTU0NDQx/fb-tolstoy-2.jpg" alt="">
+                            <figcaption>
+                                <h6 class="heading">Lev Tolstoy</h6>
+                                <em>Tiểu Thuyết Gia / Nhà Triết Học</em>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="one_half">
+                        <blockquote>'Thái độ quan trọng hơn quá khứ, hơn giáo dục, hơn tiền bạc, hơn hoàn cảnh, hơn những gì mọi người làm hoặc nói. Nó quan trọng hơn ngoại hình, năng khiếu hay kỹ năng'</blockquote>
+                        <figure class="clear">
+                            <img class="circle" src="https://i.pinimg.com/736x/c0/2f/11/c02f1114ca15d645768bf015302fb5f5.jpg" alt="">
+                            <figcaption>
+                                <h6 class="heading">Charles. Swindoll</h6>
+                                <em>Mục Sứ / Tác Giả / Nhà Giáo Dục</em>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <footer class="center"><a class="btn" href="#">Xem Thêm</a></footer>
+                <!-- ################################################################################################ -->
+            </section>
+        </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <div id="TinTucVeSach" class="wrapper row3">
+            <section class="hoc container clear">
+                <!-- ################################################################################################ -->
+                <div class="center btmspace-80">
+                    <h6 class="heading underline font-x2">CẬP NHẬT TIN TỨC VỀ CÁC ĐẦU SÁCH</h6>
+                </div>
+                <ul id="latest" class="nospace group">
+                    <li class="one_third first">
+                        <article>
+                            <figure><a class="imgover" href="#"><img src="https://znews-photo.zadn.vn/w660/Uploaded/qoswae/2021_03_30/nick.jpeg" alt=""></a></figure>
+                            <div class="excerpt">
+                                <h6 class="heading">Sắp ra mắt truyện tranh về Nick Jonas</h6>
+                                <ul class="nospace meta">
+                                    <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Admin</a></li>
+                                    <li>
+                                        <i class="far fa-clock rgtspace-5"></i>
+                                        <time datetime="2045-04-06T08:15+00:00">06 Apr 2045</time>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Nick Jonas sắp trở thành nguồn cảm hứng cho nhiều trẻ em khi câu chuyện cuộc
+                                    đời của ngôi sao này được kể lại trong cuốn truyện tranh mới[<a href="#">&hellip;</a>]
+                                </p>
+                                <footer><a class="btn" href="#">Đọc Thêm</a></footer>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article>
+                            <figure><a class="imgover" href="#"><img src="https://znews-photo.zadn.vn/w660/Uploaded/qoswae/2021_03_26/2.jpeg" alt=""></a></figure>
+                            <div class="excerpt">
+                                <h6 class="heading">
+                                    ‘Chúa tể những chiếc nhẫn’ tái bản kèm tranh minh họa
+                                </h6>
+                                <ul class="nospace meta">
+                                    <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Admin</a></li>
+                                    <li>
+                                        <i class="far fa-clock rgtspace-5"></i>
+                                        <time datetime="2045-04-05T08:15+00:00">05 Apr 2045</time>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Những khung hình minh họa của tác giả JRR Tolkien sẽ được xuất bản cùng
+                                    lời văn của ông trong ấn bản mới cuốn “The Lord of the Rings”[<a href="#">&hellip;</a>]
+                                </p>
+                                <footer><a class="btn" href="#">Đọc Thêm</a></footer>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article>
+                            <figure><a class="imgover" href="#"><img src="https://znews-photo.zadn.vn/w660/Uploaded/piqbzcvo/2021_03_23/z2394663758659_39a5bda92f2b192accad26676aa3533d.jpg" alt=""></a></figure>
+                            <div class="excerpt">
+                                <h6 class="heading">
+                                    Cuốn sách dựa trên câu chuyện có thật về cậu bé tị nạn
+                                </h6>
+                                <ul class="nospace meta">
+                                    <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Admin</a></li>
+                                    <li>
+                                        <i class="far fa-clock rgtspace-5"></i>
+                                        <time datetime="2045-04-04T08:15+00:00">04 Apr 2045</time>
+                                    </li>
+                                </ul>
+                                <p>
+                                    “Lấy nước đường xa” là câu chuyện có thật về Salva, một trong số những cậu bé bị buộc phải
+                                    rời khỏi ngôi làng của mình vì cuộc nội chiến giữa hai miền tại Sudan[<a href="#">&hellip;</a>]
+                                </p>
+                                <footer><a class="btn" href="#">Đọc Thêm</a></footer>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <!-- ################################################################################################ -->
+            </section>
+        </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <div class="wrapper row4">
+            <footer id="footer" class="hoc clear">
+                <!-- ################################################################################################ -->
+                <div class="one_quarter first">
+                    <h6 class="heading">Thông Tin Liên Hệ</h6>
+                    <ul class="nospace linklist contact btmspace-30">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>
+                                Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCM
+                                Công Ty Cổ Phần Phát Hành Sách TP HCM - OWLBOOK - 62 Lê Lợi, Quận 1, TP. HCM, Việt Nam.
+                            </address>
+                        </li>
+                        <li><i class="fas fa-phone"></i> +00 (123) 456 7890</li>
+                        <li><i class="far fa-envelope"></i>Minhhieu123@Gmail.com</li>
+                    </ul>
+                    <ul class="faico clear">
+                        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="one_quarter">
+                    <h6 class="heading">Lacinia nunc et porta</h6>
+                    <ul class="nospace linklist">
+                        <li>
+                            <article>
+                                <p class="nospace btmspace-10"><a href="#">Porta tellus massa consectetuer sem eget pharetra ligula purus sit amet dui.</a></p>
+                                <time class="block font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <p class="nospace btmspace-10"><a href="#">Commodo ornare maximus donec consectetuer adipiscing elit pellentesque habitant.</a></p>
+                                <time class="block font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div id="HuongDan" class="one_quarter">
+                    <h6 class="heading">Các Hướng Dẫn</h6>
+                    <ul class="nospace linklist">
+                        <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
+                        <li><a href="#">Hướng Dẫn Đăng Ký</a></li>
+                        <li><a href="#">Egestas in hac habitasse</a></li>
+                    </ul>
+                </div>
+                <div id="avatar">
+                    <h6>Đội ngũ cộng tác viên</h6>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="https://i.pinimg.com/564x/0c/bc/04/0cbc040e306b01460dccd46f20a1667f.jpg" alt=""></a>
+                            <a href="#"><img src="https://i.pinimg.com/564x/2d/6b/64/2d6b64e8c8ac4f29305fe80c685a97ee.jpg" alt=""></a>
+                            <a href="#"><img src="https://i.pinimg.com/564x/0c/9a/18/0c9a1880d95876bf73f11bc53add54bc.jpg" alt=""></a>
+                            <a href="#"><img src="https://i.pinimg.com/564x/e7/cb/c3/e7cbc37c6036f3266938c1020c5ca185.jpg" alt=""></a>
+                            <a href="#"><img src="https://i.pinimg.com/564x/16/e5/34/16e5342a102660c41bef292675d08ca2.jpg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ################################################################################################ -->
+            </footer>
+        </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <div class="wrapper row5">
+            <div id="copyright" class="hoc clear">
+                <!-- ################################################################################################ -->
+                <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+                <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+                <!-- ################################################################################################ -->
+            </div>
+        </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+        <!-- JAVASCRIPTS -->
+        <script src="layout/scripts/jquery.min.js"></script>
+        <script src="layout/scripts/jquery.backtotop.js"></script>
+        <script src="layout/scripts/jquery.mobilemenu.js"></script>
+    </div>
+    @*Chạy slider*@
+    <script type="text/javascript">
+    $(window).load(function () {
+            $('#slider').nivoSlider({
+                controlNav: false,
+                nextText: '',
+                prevText: ''
+            });
+        });</script>
+
+</body>
+</html>
+
