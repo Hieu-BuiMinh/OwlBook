@@ -6,6 +6,8 @@ Made with ❤️ in Vietnam
 
 ## Hi there 👋
 
+<div align='center'><img src="https://i.imgur.com/dyYEkIZ.png"/></div>
+
 I'm..
 
   ``` js
@@ -100,6 +102,13 @@ A Front-End Developer from Vietnam, specializing in web development with Angular
   <img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=maitnt&theme=transparent&hide_border=false&include_all_commits=false&count_private=false&layout=compact"/>
 </div>
 
+## 📫 Let's Connect!
+<div align="center">
+  
+<a href="mailto:..." target="_blank"> <img align="left" src="https://i.imgur.com/DwBVOsw.png" alt="mail" height="42px"/> </a> 
+<a href="#" target="_blank"> <img align="left" src="https://i.imgur.com/p0BUcf7.png" alt="linkedin" height="42px"/> </a> 
+<a href="#" target="_blank"> <img align="left" src="https://i.imgur.com/Qa1tqYE.png" alt="linkedin" height="42px"/> </a> 
+</div>
 
 
 
